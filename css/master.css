@@ -1,0 +1,126 @@
+/* Global Rules */
+:root{
+    --heading:hsl(257, 40%, 49%);
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Karla , sans-serif;
+}
+body{
+    font-size: 0.9375em;
+    background-image: url(../images/bg-mobile.svg);
+    background-color: #674BB1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+.container{
+    width:320px;
+    margin-left: auto;
+    margin-right:auto;
+    flex-direction: column;
+    display: flex;
+    justify-content:center;
+    
+}
+.container .logo{
+    width: 36%;
+    margin-bottom:40px;
+}
+.container .mockup{
+    width:100%;
+    margin-bottom:40px;
+}
+.container .text{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.container h1{
+    font-family: Poppins , sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    color:white;
+    line-height: 1.7;
+    margin-bottom:25px;
+    text-align: center;
+}
+.container p{
+    font-family: Open sans ,sans serif;
+    margin-bottom:25px;
+    color:white;
+    line-height: 1.7;
+    text-align: center; 
+    font-weight: 400;
+    font-size: 17px;
+}
+.container span{
+    text-align: center;
+    color: var(--heading);
+    background-color: white;
+    padding: 15px;
+    width: 72%;
+    align-self: center;
+    border-radius: 55px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.container .icons{
+    align-self: center;
+    margin-top:40px;
+}
+.container .icons i{
+    color: white;
+    border: 1px solid white;
+    border-spacing: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 7px;
+    margin: 5px;
+}
+
+@media (min-width:768px)
+{
+    body{
+        background-image: url(../images/bg-desktop.svg);
+    }
+    .container{
+        width:970px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .container .log{
+        flex-basis: 100%;
+        width:30%;
+    }
+    .container .log .logo{
+        width:10%;
+    }
+    .container .mockup{
+        flex-basis: 50%;
+    }
+    .container .text{
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container .text h1,
+    .container .text p{
+        text-align: initial;
+    }
+    .container .text span{
+        align-self: flex-start  ;
+    }
+    .container .text .icons{
+        align-self: flex-end;
+    }
+}
